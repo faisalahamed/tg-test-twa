@@ -109,7 +109,6 @@
             Telegram.WebApp.showAlert('Main Button was clicked')
         });	
         Telegram.WebApp.MainButton.show();
-        const user = Telegram.WebApp.initDataUnsafe.user;
         document.body.innerHTML = `<h1>Hello, ${user.first_name}!</h1>`;
         // Function to call showPopup API
         function showPopup() {
@@ -154,6 +153,18 @@
             document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
         });
 
+    </script>
+      <script>
+        Telegram.WebApp.ready();
+        
+        // Access user information
+        const user = Telegram.WebApp.initDataUnsafe.user;
+
+        // Display user information
+        document.body.innerHTML = `<h1>Hello, ${user.first_name}!</h1>`;
+
+        // Close the web app
+        Telegram.WebApp.close();
     </script>
 
     <!-- Eruda is console for mobile browsers -->
