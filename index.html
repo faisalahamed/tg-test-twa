@@ -109,7 +109,8 @@
             Telegram.WebApp.showAlert('Main Button was clicked')
         });	
         Telegram.WebApp.MainButton.show();
-
+        const user = Telegram.WebApp.initDataUnsafe.user;
+        document.body.innerHTML = `<h1>Hello, ${user.first_name}!</h1>`;
         // Function to call showPopup API
         function showPopup() {
             Telegram.WebApp.showPopup({
