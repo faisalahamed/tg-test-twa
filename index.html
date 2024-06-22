@@ -154,19 +154,6 @@
         });
 
     </script>
-     
-     <script>
-        Telegram.WebApp.ready();
-        
-        // Access user information
-        const user = Telegram.WebApp.initDataUnsafe.user;
-
-        // Display user information
-        document.body.innerHTML = `<h1>Hello, ${user.first_name}!</h1>`;
-
-        // Close the web app
-        Telegram.WebApp.close();
-    </script>
 
     <!-- Eruda is console for mobile browsers -->
     <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
