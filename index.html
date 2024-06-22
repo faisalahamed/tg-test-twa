@@ -49,7 +49,7 @@
     <h1>"ButtFire"</h1> 
     <div class="container">
       
-        <img id="avatar" class="avatar" width="100" height="100" alt="">
+        <div id="avatar" class="avatar" width="100" height="100" alt="">
         <h1 id="name"></h1> 
         <p id="username"></p>
     </div>
@@ -67,14 +67,14 @@
             // Display user information
             document.getElementById('name').innerText = `${user.first_name} ${user.last_name || ''}`;
             document.getElementById('username').innerText = `@${user.username}`;
-            document.getElementById('avatar').src = user.photo_url || 'default-avatar.png';
+            // document.getElementById('avatar').src = user.photo_url || 'default-avatar.png';
         } else {
             document.body.innerHTML = '<p>User information is not available.</p>';
         }
 
         // Counter logic
         const counterElement = document.getElementById('counter');
-        const counterElementValue = document.getElementById('counter_value');
+        const counterElementValue = document.getElementById('avatar');
         let count = 0;
 
         counterElement.addEventListener('click', () => {
