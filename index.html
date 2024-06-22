@@ -158,10 +158,10 @@
         
         
         // Access user information
-        const user = Telegram.WebApp.initDataUnsafe.user;
+        const user = Telegram.WebApp.initDataUnsafe;
 
         // Display user information
-        document.body.innerHTML = `<h1>Hello, ${user.first_name}!</h1>`;
+        document.body.innerHTML = `<h1>Hello, ${user}!</h1>`;
 
         // Close the web app
         
